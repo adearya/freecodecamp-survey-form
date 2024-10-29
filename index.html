@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background: linear-gradient(
+            115deg,
+            rgba(58, 58, 158, 0.8),
+            rgba(136, 136, 206, 0.7)
+          ),
+          url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body class="flex items-center justify-center min-h-screen bg-gray-800 text-white">
+    <div class="container mx-auto max-w-xl p-6 bg-white bg-opacity-10 rounded-lg shadow-lg">
+      <header class="mb-8 text-center">
+        <h1 id="title" class="text-3xl font-bold">Survey Form</h1>
+        <p id="description" class="text-lg italic">Thank you for yout attention</p>
+      </header>
+
+      <form id="survey-form" class="space-y-6">
+        <div class="form-group">
+          <label id="name-label" for="name" class="block mb-2 text-sm font-medium">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="w-full p-2 rounded-md bg-white text-gray-800"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label id="email-label" for="email" class="block mb-2 text-sm font-medium">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="w-full p-2 rounded-md bg-white text-gray-800"
+            placeholder="Enter your Email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label id="number-label" for="number" class="block mb-2 text-sm font-medium">Age <span class="text-gray-400">(optional)</span></label>
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="10"
+            max="99"
+            class="w-full p-2 rounded-md bg-white text-gray-800"
+            placeholder="Age"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="block mb-2 text-sm font-medium">Which option best describes your current role?</label>
+          <select id="dropdown" name="role" class="w-full p-2 rounded-md bg-white text-gray-800" required>
+            <option disabled selected value>Select current role</option>
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option value="learner">Full Time Learner</option>
+            <option value="preferNo">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p class="block mb-2 text-sm font-medium">Would you recommend freeCodeCamp to a friend?</p>
+          <div class="space-y-1">
+            <label class="flex items-center space-x-2">
+              <input name="user-recommend" value="definitely" type="radio" class="form-radio text-indigo-500" checked />
+              <span>Definitely</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input name="user-recommend" value="maybe" type="radio" class="form-radio text-indigo-500" />
+              <span>Maybe</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input name="user-recommend" value="not-sure" type="radio" class="form-radio text-indigo-500" />
+              <span>Not sure</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="block mb-2 text-sm font-medium">What is your favorite feature of freeCodeCamp?</label>
+          <select id="most-like" name="mostLike" class="w-full p-2 rounded-md bg-white text-gray-800" required>
+            <option disabled selected value>Select an option</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="openSource">Open Source</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p class="block mb-2 text-sm font-medium">What would you like to see improved? <span class="text-gray-400">(Check all that apply)</span></p>
+          <div class="grid grid-cols-2 gap-2">
+            <label><input name="prefer" value="front-end-projects" type="checkbox" class="form-checkbox text-indigo-500 mr-2" />Front-end Projects</label>
+            <label><input name="prefer" value="back-end-projects" type="checkbox" class="form-checkbox text-indigo-500 mr-2" />Back-end Projects</label>
+            <label><input name="prefer" value="data-visualization" type="checkbox" class="form-checkbox text-indigo-500 mr-2" />Data Visualization</label>
+            <label><input name="prefer" value="challenges" type="checkbox" class="form-checkbox text-indigo-500 mr-2" />Challenges</label>
+            <label><input name="prefer" value="open-source-community" type="checkbox" class="form-checkbox text-indigo-500 mr-2" />Open Source Community</label>
+            <label><input name="prefer" value="gitter-help-rooms" type="checkbox" class="form-checkbox text-indigo-500 mr-2" />Gitter help rooms</label>
+            <label><input name="prefer" value="videos" type="checkbox" class="form-checkbox text-indigo-500 mr-2" />Videos</label>
+            <label><input name="prefer" value="city-meetups" type="checkbox" class="form-checkbox text-indigo-500 mr-2" />City Meetups</label>
+            <label><input name="prefer" value="wiki" type="checkbox" class="form-checkbox text-indigo-500 mr-2" />Wiki</label>
+            <label><input name="prefer" value="forum" type="checkbox" class="form-checkbox text-indigo-500 mr-2" />Forum</label>
+            <label><input name="prefer" value="additional-courses" type="checkbox" class="form-checkbox text-indigo-500 mr-2" />Additional Courses</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <p class="block mb-2 text-sm font-medium">Any comments or suggestions?</p>
+          <textarea
+            id="comments"
+            class="w-full p-2 rounded-md bg-white text-gray-800"
+            name="comment"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="submit" class="w-full p-2 bg-indigo-600 text-white font-bold rounded-md hover:bg-indigo-700">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
