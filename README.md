@@ -1,11 +1,11 @@
 <a name="readme-top"></a>
 
-<!-- survey-form -->
+<!-- freecodecamp-survey-form -->
 <br />
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/adearya/survey-form/HEAD/raw/images/github_user_logo.jpeg" alt="Github User Logo" width="80" height="80">
+<img src="https://raw.githubusercontent.com/adearya/freecodecamp-survey-form/HEAD/raw/images/github_user_logo.jpeg" alt="Github User Logo" width="80" height="80">
 
 <h3 align="center">Survey Form - By freeCodeCamp</h3>
     <p align="center">
@@ -38,7 +38,7 @@
 
 ## About The Project
 
-![App Screenshot](https://raw.githubusercontent.com/adearya/survey-form/HEAD/raw/images/desktop_screenshot.png)
+![App Screenshot](https://raw.githubusercontent.com/adearya/freecodecamp-survey-form/HEAD/raw/images/desktop_screenshot.png)
 
 <p align="center">
     This project was developed using TailwindCSS, ensuring a clean, modern, and responsive design. The form structure follows accessibility best practices and includes various input fields to collect user responses effectively.
@@ -69,11 +69,11 @@
 
 Clone the repo
 ```sh
-git clone https://github.com/adearya/survey-form.git
+git clone https://github.com/adearya/freecodecamp-survey-form.git
 ```
 Change directory
 ```sh
-cd survey-form/
+cd freecodecamp-survey-form/
 ```
 <!-- add_installation -->
 
@@ -85,7 +85,7 @@ cd survey-form/
 
 Open a browser to see the output
 ```sh
-file:////<dirname>/index.html
+file:///<dirname>/index.html
 ```
 <!-- add_usage -->
 
